@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | App</title>
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/normlize.css">
+</head>
+<body>
+    <div class="start-btn"><button>Start Quiz</button></div>
+
+    <!-- Info Box -->
+    <div class="info-box">
+        <div class="info-title"><span>Some Rules this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. You have only <span>15 seconds</span> per each question. </div>
+            <div class="info">2. Once you select your answer you can't reselect.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from quiz you're playing.</div>
+            <div class="info">5. You'll get points on the basis of your correct answer.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz box -->
+    <div class="quiz-box">
+        <header>
+            <div class="title">Awesome Quize Application</div>
+            <div class="timer">
+                <span class="time-text">Time Left: </span>
+                <span class="time-sec">15</span>
+            </div>
+        </header>
+        <section>
+            <div class="quest"></div>
+            <div class="optins-list">
+                <div class="answer">
+                </div>
+                <div class="answer">
+                </div>
+                <div class="answer">
+                </div>
+                <div class="answer">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="total-quest">
+                <span class="que-num"><span class="points">0</span> of <span> 5 </span> Questions</span>
+            </div>
+            <button class="next-btn">Next Que</button>
+        </footer>
+    </div>
+    <!-- Result Box -->
+    <div class="result-box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <p class="complate-text">
+            You have complated the Quiz!
+        </p>
+        <div class="score">
+            <span class="score-text"> You Get <span></span> out of <span>5 </span></span>
+        </div>
+        <div class="buttons">
+            <button class="restart">
+                Replay Quiz
+            </button>
+            <button class="quit">
+                Quit Quiz
+            </button>
+        </div>
+    </div>
+    <script src="Js/main.js"></script>
+    <script src="Js/questions.js"></script>
+</body>
+</html>
