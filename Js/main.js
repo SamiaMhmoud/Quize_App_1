@@ -147,23 +147,23 @@ function quizResult() {
   let scores = points.innerText;
   let scoreSpan = document.querySelector(".score-text span:first-child");
   scoreSpan.innerText = scores;
-  //     scoreText.innerText += " Sorry, You Should Study More.";
-  // }
-  // switch(scoreSpan.innerText) {
-  //     case "0":
-  //     case "1":
-  //     case "2":
-  //         break;
-  //     case "3":
-  //         scoreText.innerText += " ,Successful effort.";
-  //         break;
-  //     case "4":
-  //         scoreText.innerText += " ,Well Done 😄 ";
-  //         break;
-  //     case "5":
-  //         scoreText.innerText += " ,Excellent! 😉";
-  //         break;
-  // }
+  let resultText = document.querySelector(".result-text");
+  switch(scoreSpan.innerText) {
+      case "0":
+      case "1":
+      case "2":
+        resultText.innerText = " Sorry, You Should Study More.";
+          break;
+      case "3":
+          resultText.innerText = " ,Successful effort.";
+          break;
+      case "4":
+          resultText.innerText = " ,Well Done 😄 ";
+          break;
+      case "5":
+          resultText.innerText = " ,Excellent! 😉";
+          break;
+  }
 }
 
 // If Next Quest button clicked
