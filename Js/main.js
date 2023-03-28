@@ -147,7 +147,6 @@ function quizResult() {
   let scores = points.innerText;
   let scoreSpan = document.querySelector(".score-text span:first-child");
   scoreSpan.innerText = scores;
-  let scoreText = document.querySelector(".score-text");
   // if(Number.parseInt(scoreSpan.innerText) < 3) {
   //     scoreText.innerText += " Sorry, You Should Study More.";
   // }
