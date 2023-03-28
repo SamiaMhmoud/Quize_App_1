@@ -13,7 +13,6 @@ const start = document.querySelector(".start-btn"),
   timeLeft = document.querySelector(".time-sec"),
   answer = document.querySelectorAll(".answer"),
   scoreSpan = document.querySelector(".score-text span:first-child");
-  console.log(scoreSpan);
   let questions = [
     {
       num: 1,
@@ -86,12 +85,12 @@ rulesRestart.onclick = () => {
 let queCount = 0;
 // Getting Questions And Options From Array
 function showQuestions(index) {
-  const question = document.querySelector(".quest"),
+    const question = document.querySelector(".quest"),
     questionTag = `<span>${questions[index].question}</span>`;
-  question.innerHTML = questionTag;
-  questions[index].options.forEach((element, i) => {
-    answerTag = `<span>${element}</span>`;
-    answer[i].innerHTML = answerTag;
+    question.innerHTML = questionTag;
+    questions[index].options.forEach((element, i) => {
+      answerTag = `${element}`;
+      answer[i].innerHTML = answerTag;
   });
   let rightAns = `<div class="icons tick"><i class="fas fa-check"></i></div>`,
     wrongAns = `<div class="icons times"><i class="fas fa-times"></i></div>`;
@@ -125,6 +124,7 @@ function showQuestions(index) {
         clearInterval(counter);
       } else if (e.target.classList.contains("next-btn")) {
         clearInterval(counter);
+        timeLeft.innerHTML = 15;
       }
     });
   }
@@ -143,9 +143,7 @@ function correctAns(i, right) {
 
 // Show Quiz Result
 function quizResult() {
-  console.log(points.innerText);
   let scores = points.innerText;
-  let scoreSpan = document.querySelector(".score-text span:first-child");
   scoreSpan.innerText = scores;
   let resultText = document.querySelector(".result-text");
   switch(scoreSpan.innerText) {
